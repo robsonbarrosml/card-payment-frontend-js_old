@@ -1,5 +1,5 @@
 body {
-	font-family: proxima-nova,Helvetica,sans-serif;
+	font-family: "proxima nova",Helvetica,sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	font-style: normal;
@@ -31,10 +31,10 @@ header {
 	float:left;
 	width: 50%;
 	margin-right:-210px;
-	padding: 30px 0px 30px 100px;
+	padding: 30px 0px 30px 70px;
 }
 #product{
-	width:290px;
+	width:350px;
 	background: #fff;
 	border-radius: 10px;
 	padding: 10px 10px;
@@ -42,8 +42,57 @@ header {
 	   -moz-box-shadow: 1px 1px 8px #ccc;
 	        box-shadow: 1px 1px 8px #ccc;	
 }
+.a {
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.b {
+	width: 65%;
+	height: 50%;
+    margin: 0 0 0 35%;
+	position: absolute;
+	border-bottom: #F0F0F0 2px solid;
+}
+.b h1 {
+	font: bold 20px "proxima nova", Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+    width: 10em
+}
+.b h2 {
+	font: 11px "proxima nova", Helvetica, sans-serif;
+	margin-left: 6%;
+	margin-top: 8px;
+    width: 15em
+}
+.c {
+	width: 65%;
+	height: 50%;
+    margin: 28.5% 0 0 35%;
+    position: absolute;
+}
+.d {
+	width: 35%;
+	height: 100%;
+    position: absolute;
+}
+/*
+.a{ background: orange }
+.b{ background: blue; height: 50% }
+.c{ background: green; height: 50% }
+.d{ background: yellow; height: 100% }
+*/
+
 #img_product {
-	width: 200px;
+	width: 90%;
+	display: block;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
 }
 .right{
 	float:right;
@@ -237,7 +286,8 @@ footer {
 	margin: 0;
 }
 
-@media screen and (max-width: 835px) {
+/* ALteração da estrutura após diminuição da tela */
+@media screen and (max-width: 895px) {
 	.right, .product, .left {
 		float: none;
 		width: 100%;
@@ -246,8 +296,11 @@ footer {
 	.main {
 		background: #fff;
 	}
-	.left, #product {
+	.left {
 		padding: 30px 0px 20px 0px;
+		margin: 0 auto;
+	}
+	#product {
 		margin: 0 auto;
 	}
 	.right, #payment {
