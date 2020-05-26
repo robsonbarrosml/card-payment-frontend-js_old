@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+        <title>Exemplos - Checkout MP e Checkout Transparente</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/300-400-600.css">
+        
+        <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        
+		</head>
+	<body onload="carregaParcelas()">
+        <header>
+			<div class="header">
+				<img id="logo_horizontal" src="img/logo_horizontal.png">
+			</div>
+		</header>
+		<div class="main">
+			<div class="left">
+				<div id="product">
+					<img id="img_product" src="img/produto.jpg">
+				</div>
+				
+			</div>
+			<div class="right">
+				<div id="payment">
+                    <form action="/procesar_pago" method="post" id="pay" name="pay" >
+                        <fieldset class="fieldset">
+                            <ul class="contact_form">
+                                <li>
+                                    <label for="cardNumber">Número do cartão</label>
+                                    <input type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false" onpaste="return true" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+                                </li>
+                                <li>
+                                    <label for="cardholderName">Nome no cartão</label>
+                                    <input type="text" id="cardholderName" data-checkout="cardholderName" />
+                                </li>                                   
+                                <li>
+                                    <label for="cardExpirationMonth">Mês/Ano de vencimento</label>
+                                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+                                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+                                </li>
+                                <li>
+                                    <label for="securityCode">Código de Segurança</label>
+                                    <input type="text" id="securityCode" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+                                </li>
+                                <li>
+                                <label for="installments">Número de parcelas</label>
+                                <select id="installments" class="form-control" name="installments"></select>
+                                </li>
+                                <li>
+                                    <label for="docType">Tipo/Número do documento</label>
+                                    <select id="docType" data-checkout="docType"></select>
+                                    <input type="text" id="docNumber" data-checkout="docNumber"/>
+                                </li>
+                                <li>
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" value="test@test.com"/>
+                                    <span class="form_hint">Proper format "name@something.com"</span>
+                                </li>
+                                <li>
+                                    <input type="hidden" name="payment_method_id" id="payment_method_id"/>
+                                
+                                    <input type="submit" value="Pagar"/>
+                                </li>
+                            </ul> 
+                        </fieldset>
+                    </form>
+                </div>
+			</div>
+        </div>
+        <footer>
+			<img id="logo_vertical" src="img/logo_vertical.png">
+		</footer>
+	</body>
+</html>        
