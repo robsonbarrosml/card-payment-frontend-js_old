@@ -22,7 +22,7 @@ header {
 	max-width:1200px;
 	margin:0 auto;
 	overflow:hidden;
-	background: #F5F5F5;
+	background: #fff;
 }
 .left{
 	float:left;
@@ -69,6 +69,48 @@ header {
     margin: 28.5% 0 0 35%;
     position: absolute;
 }
+#amount {
+	width: 50%;
+	height: 100%;
+    margin: 0 0 0 0;
+	position: absolute;
+}
+#amount p {
+	font: 20px "proxima nova", Helvetica, sans-serif;
+	width: auto;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+#quantity {
+	width: 50%;
+	height: 100%;
+    margin: 0 0 0 50%;
+	position: absolute;
+}
+.quantity_form label {
+	width: auto;
+	margin: 0;
+    position: absolute;
+    top: 25%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.quantity_form select {
+	height:38px; 
+	width:60px; 
+	padding:2px 8px;
+	margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
 .product_img {
 	width: 35%;
 	height: 100%;
@@ -95,12 +137,12 @@ header {
 }
 
 /* === Estilos Lista do Formulário === */
-.payment_form ul {
+/*.payment_form ul {
     list-style-type:none;
 	list-style-position:outside;
 	margin:0px;
 	padding:0px;
-}
+}*/
 .payment_form li{
 	background-color: #fff;
 	padding:3px; 
@@ -149,8 +191,11 @@ header {
 	border-radius:0px 6px 6px 0px;
 }
 .submit {
+	margin-top: 10px;
 	height:38px; 
-	width:310px; 
+	width:310px;
+	background: #009EE3;
+	color: #fff;
 }
 
 	/* Estilos visuais dos Elementos do Formulário */
@@ -168,6 +213,15 @@ header {
 		background: #fff; 
 		border:1px solid #555; 
 		box-shadow: 0 0 3px #aaa; 
+	}
+	.payment_form button {
+		border: 1px solid #F5F5F5;
+		border-radius:6px;
+		padding-right:00px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
 	}
 
 /* === Validação dos campos === */	

@@ -31,7 +31,7 @@ function carregaParcelas() {
     function getInstallments(){
         window.Mercadopago.getInstallments({
             "payment_method_id": document.getElementById('payment_method_id').value,
-            "amount": parseFloat(100)//(document.getElementById('transaction_amount').value)
+            "amount": parseFloat(50)//(document.getElementById('transaction_amount').value)
             
         }, function (status, response) {
             if (status == 200) {

@@ -27,7 +27,19 @@
                             <h1>Como fazer amigos e influenciar pessoas</h1>
                             <h2>Entregue por mercadolivre.com</h2>
                         </div>
-                        <div class='product_amount'>c</div>
+                        <div class='product_amount'>
+                            <div id="amount">
+                                <p>R$ 50,00</p>
+                            </div>
+                            <div id="quantity">
+                                <form class="quantity_form">
+                                    <label for="select_quantity">Quantidade:</label>
+                                    <select id="select_quantity" default="1">
+                                        <option value="1" selected>1</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
                         <div class='product_img'>
                             <img id="img_product" src="img/produto.jpg">
                         </div>
@@ -38,7 +50,7 @@
 				<div id="payment">
                     <form action="/procesar_pago" class="payment_form" method="post" id="pay" name="pay" >
                         <fieldset class="fieldset">
-                            <ul class="contact_form">
+                            <ul>
                                 <li>
                                     <label for="cardNumber">Número do cartão</label>
                                     <input class="input" type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false" onpaste="return true" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off pattern="[0-9]{16}|[0-9]{19}" placeholder="4242424242424242" required />
@@ -72,7 +84,7 @@
                                 <li>
                                     <input type="hidden" name="payment_method_id" id="payment_method_id"/>
                                 
-                                    <input class="submit" type="submit" value="Pagar"/>
+                                    <button class="submit" type="submit">Pagar</button>
                                 </li>
                             </ul> 
                         </fieldset>
