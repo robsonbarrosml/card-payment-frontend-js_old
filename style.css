@@ -1,9 +1,15 @@
+body {
+	font-family: "proxima nova",Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	font-style: normal;
+	color: RGBA(0,0,0,0.45);
+}
 header {
 	background: #C6E9FA;
 	padding: 10px 0;
 }
-
-.cabecalho {
+.header {
 	position: relative;
 	width: 940px;
 	margin: 0 auto;
@@ -12,24 +18,202 @@ header {
 #logo_horizontal {
 	width: 200px;
 }
-
-.checkout {
-	width: 100%;
-	margin: 0 auto;
-	padding: 0x 0;
-	background-color: #cccccc;
+.main{
+	max-width:1200px;
+	margin:0 auto;
+	overflow:hidden;
+	background: #F5F5F5;
 }
-	
-.checkout li {
-	display: inline-block;
-	text-align: center;
-	width: 49%;
-	vertical-align: top;
-	padding: 30px 0px;
-	box-sizing: border-box;
-	background-color: #C6E9FA;
+.left{
+	float:left;
+	width: 50%;
+	margin-right:-210px;
+	padding: 30px 0px 30px 70px;
+}
+#product{
+	width:350px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px 10px;
+	-webkit-box-shadow: 1px 1px 8px #ccc; 
+	   -moz-box-shadow: 1px 1px 8px #ccc;
+	        box-shadow: 1px 1px 8px #ccc;	
+}
+.product {
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+.product_description {
+	width: 65%;
+	height: 50%;
+    margin: 0 0 0 35%;
+	position: absolute;
+	border-bottom: #F0F0F0 2px solid;
+}
+.product_description h1 {
+	font: bold 20px "proxima nova", Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+    width: 10em
+}
+.product_description h2 {
+	font: 11px "proxima nova", Helvetica, sans-serif;
+	margin-left: 6%;
+	margin-top: 8px;
+    width: 15em
+}
+.product_amount {
+	width: 65%;
+	height: 50%;
+    margin: 28.5% 0 0 35%;
+    position: absolute;
+}
+.product_img {
+	width: 35%;
+	height: 100%;
+    position: absolute;
+}
+#img_product {
+	width: 90%;
+	display: block;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+.right{
+	float:right;
+	width:50%;
+	background: #fff;
+}
+#payment {
+	width: 320px;
+	background: #fff;
+	padding: 30px 0px 30px 100px;
+}
+
+/* === Estilos Lista do Formulário === */
+.payment_form ul {
+    list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
+}
+.payment_form li{
+	background-color: #fff;
+	padding:3px; 
+	position:relative;
+} 
+
+/* === Estilos dos Elementos do Formulário === */
+.payment_form label {
+	width:200px;
+	display:block;
+	padding-bottom:3px;
+}
+.input {
+	height:32px; 
+	width:300px; 
+	padding:2px 8px;
+}
+.payment_form select {
+	height:38px; 
+	width:310px; 
+	padding:2px 8px;
+}
+#cardExpirationMonth {
+	width: 153px;
+	padding: 2px 0px;
+	margin-right: 0px;
+	border-radius:6px 0px 0px 6px;
+}
+#cardExpirationYear {
+	width: 153px;
+	padding: 2px 0px;
+	margin-left: -2px;
+	border-radius:0px 6px 6px 0px;
+}
+#docType {
+	width: 84px;
+	padding: 2px 0px;
+	margin-right: 0px;
+	border-radius: 6px 0px 0px 6px;;
+	-webkit-appearance: none;
+}
+#docNumber {
+	width: 224px;
+	padding: 2px 0px;
+	margin-left: -2px;
+	border-radius:0px 6px 6px 0px;
+}
+.submit {
+	height:38px; 
+	width:310px; 
+}
+
+	/* Estilos visuais dos Elementos do Formulário */
+	.payment_form input, .payment_form select { 
+		border:1px solid #F5F5F5;
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #fff inset;
+		border-radius:6px;
+		padding-right:00px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.payment_form input:focus, .payment_form textarea:focus, .payment_form select:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa; 
 	}
 
+/* === Validação dos campos === */	
+.payment_form input:required, .payment_form textarea:required {
+	background: #fff url(img/red_asterisk.png) no-repeat 98% center;
+}
+.payment_form input:required:valid, .payment_form textarea:required:valid {
+	background: #fff url(img/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.payment_form input:focus:invalid, .payment_form textarea:focus:invalid {
+	background: #fff url(img/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+
+/* ALteração da estrutura após diminuição da tela */
+@media screen and (max-width: 895px) {
+	.right, .product, .left {
+		float: none;
+		width: 100%;
+		margin-right:0;
+	}
+	.main {
+		background: #fff;
+	}
+	.left {
+		padding: 30px 0px 20px 0px;
+		margin: 0 auto;
+	}
+	#product {
+		margin: 0 auto;
+	}
+	.right, #payment {
+		background: #fff;
+		padding: 20px 0px 15px 0px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	#payment, .payment_form ul {
+		background: #fff;
+		margin: 0 auto;
+		width: 320px;
+	}
+}
 footer {
 	text-align: center;
 	background: #EDEDED;
